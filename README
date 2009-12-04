@@ -1,0 +1,13 @@
+Some helper classes for building modular apps with RobotLegs.
+
+Modules should extend GenericModule.
+
+Each module requires a context, which should extend GenericModuleContext.
+
+The GenericModuleMediator class should not be extended, but can be used as a template for a mediator for your module.
+
+The ModuleCommandMap and ModuleEventDispatcher work together to provide the modules with a shared event/command bus for inter-module events to take place.
+
+Please see the RobotLegs framework for more info.
+
+These classes were compiled to work with RobotLegs v1.0.
