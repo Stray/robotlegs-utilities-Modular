@@ -5,16 +5,12 @@
  * in accordance with the terms of the license agreement accompanying it.
  */
 
-package org.robotlegs.utilities.modular
+package org.robotlegs.utilities.modular.core
 {
-	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
 	
-	public class ModuleEventDispatcher extends EventDispatcher
+	public interface IModuleEventDispatcher extends IEventDispatcher
 	{
-		public function ModuleEventDispatcher(target:IEventDispatcher = null)
-		{
-			super(target);
-		}
+	
 	}
 }

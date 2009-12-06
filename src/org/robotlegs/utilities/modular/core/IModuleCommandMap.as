@@ -5,11 +5,12 @@
  * in accordance with the terms of the license agreement accompanying it.
  */
 
-package org.robotlegs.utilities.modular
+package org.robotlegs.utilities.modular.core
 {
+	import org.robotlegs.core.ICommandMap;
 	
-	public interface IModuleContextView
+	public interface IModuleCommandMap extends ICommandMap
 	{
-		function setModuleDispatcher(dispatcher:ModuleEventDispatcher):void;
+	
 	}
 }

@@ -5,17 +5,17 @@
  * in accordance with the terms of the license agreement accompanying it.
  */
 
-package org.robotlegs.utilities.modular
+package org.robotlegs.utilities.modular.base
 {
-	import flash.events.IEventDispatcher;
-	
 	import org.robotlegs.base.CommandMap;
 	import org.robotlegs.core.IInjector;
 	import org.robotlegs.core.IReflector;
+	import org.robotlegs.utilities.modular.core.IModuleCommandMap;
+	import org.robotlegs.utilities.modular.core.IModuleEventDispatcher;
 	
-	public class ModuleCommandMap extends CommandMap
+	public class ModuleCommandMap extends CommandMap implements IModuleCommandMap
 	{
-		public function ModuleCommandMap(eventDispatcher:IEventDispatcher, injector:IInjector, reflector:IReflector)
+		public function ModuleCommandMap(eventDispatcher:IModuleEventDispatcher, injector:IInjector, reflector:IReflector)
 		{
 			super(eventDispatcher, injector, reflector);
 		}
