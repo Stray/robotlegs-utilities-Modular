@@ -19,9 +19,10 @@ package org.robotlegs.utilities.modular.mvcs
 	{
 		protected var _isModuleDispatcherSet:Boolean;
 		
-		public function ModuleContext(contextView:DisplayObjectContainer = null, autoStartup:Boolean = true)
+		public function ModuleContext(contextView:DisplayObjectContainer = null)
 		{
-			super(contextView, autoStartup);
+			// autostartup doesn't make sense in this set up because you need to run setModuleDispatcher before startup();
+			super(contextView, false);
 		}
 		
 		override public function startup():void
@@ -29,7 +30,6 @@ package org.robotlegs.utilities.modular.mvcs
 			if (!_isModuleDispatcherSet)
 			{
 				trace("DIAGNOSTIC HELPER: You need to set up the module dispatcher before you can run startup. If your app bails now... you'll know why.")
-				trace("Make sure that you have a shell context, and that IModuleContextView has been set up for injection via a viewMap");
 			}
 			super.startup();
 		}
@@ -37,7 +37,8 @@ package org.robotlegs.utilities.modular.mvcs
 		public function setModuleDispatcher(dispatcher:IModuleEventDispatcher):void
 		{
 			injector.mapValue(IModuleEventDispatcher, dispatcher);
-			injector.mapSingletonOf(IModuleCommandMap, ModuleCommandMap);
+			injector.mapValue(IModuleCommandMap, new ModuleCommandMap(dispatcher, injector, reflector));
+			
 			_isModuleDispatcherSet = true;
 		}
 	}

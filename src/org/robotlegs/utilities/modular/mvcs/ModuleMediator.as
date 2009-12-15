@@ -14,6 +14,21 @@ package org.robotlegs.utilities.modular.mvcs
 	{
 		[Inject]
 		public var moduleDispatcher:IModuleEventDispatcher;
+	   		
+		[Inject]
+		public var moduleCommandMap:IModuleCommandMap;
+	                                                                   
+	
+		// Helper functions for passing events between / around modules
+		protected function redispatchToModules(e:Event):void{
+			moduleDispatcher.dispatchEvent(e);
+		}
+	
+		protected function redispatchInternally(e:Event):void{
+			// you could equally use the dispatch(e) helper, but sometimes longhand offers clarity
+			eventDispatcher.dispatchEvent(e);
+		}   
 	
 	}
+	
 }
