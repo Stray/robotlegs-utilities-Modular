@@ -1,4 +1,4 @@
-s/*
+/*
  * Copyright (c) 2009 the original author or authors
  *
  * Permission is hereby granted to use, modify, and distribute this file
@@ -23,6 +23,11 @@ package org.robotlegs.utilities.modular.mvcs
 		public function setModuleDispatcher(dispatcher:IModuleEventDispatcher):void
 		{
 			context.setModuleDispatcher(dispatcher);
+		}
+		
+		public function startup():void
+		{
+			context.startup();
 		}
 	}
 }

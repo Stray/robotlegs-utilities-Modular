@@ -11,5 +11,8 @@ package org.robotlegs.utilities.modular.core
 	public interface IModuleContextView
 	{
 		function setModuleDispatcher(dispatcher:IModuleEventDispatcher):void;
+	
+		function startup():void;
+		
 	}
 }

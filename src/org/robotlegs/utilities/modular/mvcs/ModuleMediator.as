@@ -9,6 +9,9 @@ package org.robotlegs.utilities.modular.mvcs
 {
 	import org.robotlegs.mvcs.Mediator;
 	import org.robotlegs.utilities.modular.core.IModuleEventDispatcher;
+	import org.robotlegs.utilities.modular.core.IModuleCommandMap;
+	
+	import flash.events.Event;
 	
 	public class ModuleMediator extends Mediator
 	{
