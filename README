@@ -1,12 +1,12 @@
 Some helper classes for building modular apps with RobotLegs.
 
-Shells should extend ModuleShellContext.
-
 Modules should extend ModuleContextView.
 
 Each module requires a context, which should extend ModuleContext.
 
 The IModuleCommandMap and IModuleEventDispatcher work together to provide the modules with a shared event/command bus for inter-module events to take place.
+
+You need to provide each module with the shared ModuleEventDispatcher, and then run startup() on each module to kick things off.
 
 Please see the RobotLegs framework for more info.
 
