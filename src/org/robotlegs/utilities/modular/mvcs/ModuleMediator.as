@@ -33,12 +33,12 @@ package org.robotlegs.utilities.modular.mvcs
 		}
 
                 // extra sugar to reduce boilerplate on the transfer of events
-                protected function mapRedispatchInternally(evt:Event):void{
-			eventMap.mapListener(moduleDispatcher, evt, redispatchInternally);
+                protected function mapRedispatchInternally(eventType:String):void{
+			eventMap.mapListener(moduleDispatcher, eventType, redispatchInternally);
 		}
 		
-		protected function mapRedispatchToModules(evt:Event):void{
-			eventMap.mapListener(eventDispatcher, evt, redispatchToModules);
+		protected function mapRedispatchToModules(eventType:String):void{
+			eventMap.mapListener(eventDispatcher, eventType, redispatchToModules);
 		}
 
 	
