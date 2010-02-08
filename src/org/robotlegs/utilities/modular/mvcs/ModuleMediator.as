@@ -30,7 +30,17 @@ package org.robotlegs.utilities.modular.mvcs
 		protected function redispatchInternally(e:Event):void{
 			// you could equally use the dispatch(e) helper, but sometimes longhand offers clarity
 			eventDispatcher.dispatchEvent(e);
-		}   
+		}
+
+                // extra sugar to reduce boilerplate on the transfer of events
+                protected function mapRedispatchInternally(evt:Event):void{
+			eventMap.mapListener(moduleDispatcher, evt, redispatchInternally);
+		}
+		
+		protected function mapRedispatchToModules(evt:Event):void{
+			eventMap.mapListener(eventDispatcher, evt, redispatchToModules);
+		}
+
 	
 	}
 	
