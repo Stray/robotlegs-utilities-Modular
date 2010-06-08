@@ -1,5 +1,8 @@
 Some helper classes for building modular apps with RobotLegs.
 
+** Note, if you are using Flex and Robotlegs 1.1 then please see the Joel Hooks fork instead. 
+
+
 Modules should extend ModuleContextView.
 
 Each module requires a context, which should extend ModuleContext.
