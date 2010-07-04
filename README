@@ -1,7 +1,6 @@
 Some helper classes for building modular apps with RobotLegs.
 
-** Note, if you are using Flex and Robotlegs 1.1 then please see the Joel Hooks fork instead. 
-
+** Note, if you are using Flex, or AS3 with Robotlegs 1.1 then please see the [Joel Hooks fork](http://github.com/joelhooks/robotlegs-utilities-Modular) instead:  
 
 Modules should extend ModuleContextView.
 
