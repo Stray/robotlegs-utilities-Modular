@@ -1,6 +1,8 @@
-Some helper classes for building modular apps with RobotLegs.
+Some helper classes for building modular apps with Robotlegs.
 
-** Note, if you are using Flex, or AS3 with Robotlegs 1.1 then please see the [Joel Hooks fork](http://github.com/joelhooks/robotlegs-utilities-Modular) instead:  
+Note, if you are using Flex, or AS3 with Robotlegs 1.1 or later then please see the [Joel Hooks fork](http://github.com/joelhooks/robotlegs-utilities-Modular) instead:  
+
+This fork is frozen at this point PURELY for the convenience of the small number of early-adopters who are bound to using Robotlegs v 1.0.x 
 
 Modules should extend ModuleContextView.
 
@@ -10,6 +12,6 @@ The IModuleCommandMap and IModuleEventDispatcher work together to provide the mo
 
 You need to provide each module with the shared ModuleEventDispatcher, and then run startup() on each module to kick things off.
 
-Please see the RobotLegs framework for more info.
+Please see the Robotlegs framework for more info.
 
-These classes were compiled to work with RobotLegs v1.0.
+These classes were compiled to work with Robotlegs v1.0.
